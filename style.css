@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* style2.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+body {
+    background: #f2f2f2;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    background-attachment:fixed;
+}
+
+
+
+.header {
+    height: 80px;
+    background: #31fc96;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    border-radius: 25px;
+    margin-top: 5px;
+    box-shadow: lightgray 1px 1px 5px;
+    border: 1px solid #8d8d8d;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+
+.nav a,
+.header-right a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+
+.layout {
+    display: grid;
+    grid-template-columns: 220px 806px 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+
+
+
+
+.sidebar {
+    background-color: #31fc96;
+    height: 770px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+    border-radius: 25px;
+    box-shadow: lightgray 1px 1px 5px;
+    border: 1px solid #8d8d8d;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+
+
+.content h2 {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* СЛАЙДЕР */
+
+.slider {
+    position: relative;
+}
+
+.slider-window {
+    width: 806px;
+    overflow: hidden;
+    padding-top: 25px;    /* Теперь сверху есть 25px свободного места ДЛЯ ХОВЕРА */
+    margin-top: -25px;    /* Поднимаем всё окно обратно, чтобы не было дырки сверху */
+    
+    padding-bottom: 25px; /* И снизу тоже, чтобы тень от карточки не обрезалась */
+    margin-bottom: -25px;
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px;
+    transition: 0.4s;
+}
+
+.card {
+    min-width: 180px;
+    height: 260px;
+    background: #f7f7f7;
+    border-radius: 18px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    box-shadow: lightgray 1px 1px 5px;
+    border: 1px solid #8d8d8d;
+}
+
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+.card span {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.card p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.card:hover{
+    transition: all 0.3s ease;
+    transform: translateY(-5px);
+    overflow: visible;
+}
+
+
+/* кнопки */
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    z-index: 10; /* ВАЖНО */
+    transition: 0.2s ease;
+}
+
+/* Позиции */
+.prev {
+    left: -22px; /* половина ширины кнопки */
+}
+
+.next {
+    right: -22px;
+}
+
+.prev:hover,
+.next:hover {
+    background: #34d17a;
+    color: white;
+}
+
+/* Нажатие */
+.prev:active,
+.next:active {
+    transform: translateY(-50%) scale(0.95);
+}
+    
+
+.announcement {
+    height: 50px;
+    background: #d9d9d9;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: lightgray 1px 1px 5px;
+    border: 1px solid #8d8d8d;
+}
+
+.category {
+    height: 160px;
+    background: #cfcfcf;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    font-weight: 600;
+    border-radius: 25px;
+    box-shadow: lightgray 1px 1px 5px;
+    border: 1px solid #8d8d8d;
+    margin-top:50px;
+    
+}
+
+
+
+
+
+.rightbar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.address {
+    height: 100px;
+    background: #31fc96;
+    padding-left: 30px;
+    padding-top: 20px;
+    border-radius: 25px;
+    box-shadow: lightgray 1px 1px 5px;
+    border: 1px solid #8d8d8d;
+}
+
+.cart {
+    height: 740px;
+    background: #31fc96;
+    padding-left: 30px;
+    padding-top: 20px;
+    border-radius: 25px;
+    box-shadow: lightgray 1px 1px 5px;
+    border: 1px solid #8d8d8d;
+}
+
+.downhref{
+    margin-bottom: 45px;
+}
+
+.uphref{
+    margin-top: 10px;
+}
+
+/* ЗАТЕМНЕНИЕ */
+
+.catalog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 100px;
+    z-index: 999;
+}
+
+/* ОСНОВНОЙ БЛОК */
+
+.catalog {
+    width: 1100px;
+    height: 600px;
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+}
+
+.insidecart {
+    width: 290px;
+    height: 680px;
+    background:#8d8d8d;
+    border-radius: 10px;
+    margin-top:8px;
+}
+
+
+.productphoto {
+    width: 40%;
+    height: 40%;
+    border-radius: 5%;
+}
+
+
+
+
+/* Главный контейнер */
+.allproductcard {
+    display: flex;         /* Ставит фото и текст в ряд */
+    gap: 50px;             /* Расстояние между ними */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 30px;
+    max-width: 1000px;
+    margin: 40px auto;     /* Центрируем на странице */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Легкая тень */
+    margin-top: 140px;
+}
+
+/* Блок с фото */
+.divproductphoto {
+    flex: 0 0 400px;       /* Фиксированная ширина для фото */
+    background: #f9f9f9;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.productphoto {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Блок с текстом */
+.producttext {
+    flex: 1;               /* Занимает всё оставшееся место */
+    display: flex;
+    flex-direction: column; /* Элементы внутри текста идут сверху вниз */
+    margin-top: 0 !important; /* Убираем твой старый отступ 250px */
+}
+
+.brand-tag {
+    color: #31fc96;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.productname {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* КБЖУ (Квадратики) */
+.nutrition-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.n-item {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 70px;
+}
+
+.n-item b { display: block; font-size: 16px; }
+.n-item span { font-size: 11px; color: #888; font-weight: 400; }
+
+/* Цена и Кнопка */
+.price-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fcfcfc;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.main-price {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.weight {
+    font-size: 14px;
+    color: #888;
+    margin-left: 10px;
+}
+
+.buy-button {
+    background: #31fc96; /* основной зеленый */
+    border: none;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buy-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(49, 252, 150, 0.4);
+}
+
+/* Описание */
+.productdescription h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.productdescription p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+
+
+/* Эффект при наведении на всю карточку */
+.allproductcard {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Для позиционирования бейджа */
+    cursor: pointer;
+}
+
+.allproductcard:hover {
+    transform: translateY(-5px); /* Карточка чуть приподнимается */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1); /* Тень становится глубже */
+}
+
+/* Бейдж "Новинка" (как в супермаркетах) */
+.allproductcard::before {
+    content: "НОВИНКА";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #ff4d4d; /* Красный цвет внимания */
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 900;
+    z-index: 10;
+}
+
+
+
+
+
+/* 1. Делаю шапку зафиксированной сверху */
+.header {
+    position: sticky;
+    top: 15px;             /* 1. Делаем зазор от верхнего края экрана */
+    z-index: 9999;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 0 40px;
+    height: 80px;
+    
+    /* 2. Закругляю углы со всех сторон */
+    border-radius: 20px; 
+    
+    /* 3. Добавляю мягкую тень, чтобы низ не казался обрубленным */
+    border: 1px solid #8d8d8d; /* Тонкая рамка для четкости */
+    box-shadow: lightgray 1px 1px 5px;
+    /* 4. Даю боковые отступы, чтобы шапка не касалась краев монитора */
+    margin: 0 20px 30px 20px; 
+}
+
+/* 2. Стиль строки поиска */
+.search-bar {
+    flex: 0 1 400px;       /* Ширина поиска (макс 400px) */
+    display: flex;
+    position: relative;
+    margin: 0 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-input:focus {
+    background: #fff;
+    border-color: #31fc96; /* зеленый */
+    box-shadow: 0 0 8px rgba(49, 252, 150, 0.3);
+}
+
+.search-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* 3. Стиль корзины с цифрой */
+.cart-wrapper {
+    position: relative;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: #ff4d4d; /* Красный индикатор */
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+
+/* Страница логина */
+
+/* Обёртка для полей ввода */
+.divlogin {
+    display: flex;
+    flex-direction: column; /* Выстраивает элементы вертикально */
+    gap: 25px;             /* Расстояние между инпутами */
+}
+
+/* базовые стили инпутов */
+.login-input, .password-input {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    outline: none;
+    transition: 0.3s;
+    width: 300px;
+}
+
+.login-input:focus, .password-input:focus {
+    background: #fff;
+    border-color: #31fc96;
+    box-shadow: 0 0 8px rgba(49, 252, 150, 0.3);
+}
+
+/* Центрирование всей формы на странице */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Центрирует по всей высоте экрана вместо margin-top */
+}
+
+.login-button{
+    background: #ffffff; 
+    border: 1px solid #ddd;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(49, 252, 150, 0.4);
+    color: #000000;
+    background-color: #31fc96;
+}
+
+.divbacktohomepage{
+    background: #ffffff; 
+    border: 1px solid #ddd;
+    padding: 3px 5px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 170px;
+    margin-bottom: 80px;
+    
+}
+
+.divbacktohomepage:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(49, 252, 150, 0.4);
+    color: #000000;
+    background-color: #31fc96;
+}
